@@ -1,0 +1,28 @@
+<%= form_for(@ticket) do |f| %>
+  <% if @ticket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ticket.errors.count, "error") %> prohibited this image from being saved:</h2>
+
+      <ul>
+      <% @ticket.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :problem %>
+    <%= f.text_field :problem, placeholder: "What's wrong?" %>
+  </div>
+  <div class="field">
+    <%= f.label :complaintant_name %>
+    <%= f.string :complaintant_name, placeholder: "What's your name?" %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Complain about it", class: "button" %>
+<% end %>
