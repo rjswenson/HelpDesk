@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131121220932) do
+ActiveRecord::Schema.define(version: 20131121235300) do
 
   create_table "tickets", force: true do |t|
     t.string   "problem",          limit: 200
-    t.string   "compaintant_name"
+    t.string   "complainant_name"
     t.string   "email"
     t.boolean  "completed",                    default: false
     t.datetime "created_at"
