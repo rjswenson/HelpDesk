@@ -1,0 +1,10 @@
+<ul>
+  <% @tickets.each do |tix| %>
+    <% if tix.completed? %>
+      <li>
+        <strong><%= tix.problem %></strong><br/>
+        <%= distance_of_time_in_words(tix.created_at, Time.current) %> ago.
+      </li><br/>
+    <% end %>
+  <% end %>
+</ul>
