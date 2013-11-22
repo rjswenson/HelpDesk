@@ -1,7 +1,7 @@
 class TicketsController < ApplicationController
 
   def index
-    @tickets = Ticket.all
+    @tickets = Ticket.order("created_at DESC").to_a
     @ticket = Ticket.new
   end
 
@@ -23,6 +23,12 @@ class TicketsController < ApplicationController
       flash[:alert] = "Ticket not saved."
       redirect_to root_path
     end
+  end
+
+  def destroy
+    @ticket = Ticket.find(params[:id])
+    @ticket.destroy
+    redirect_to root_path
   end
 
   private
