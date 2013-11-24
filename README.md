@@ -7,6 +7,19 @@ Description
 -----------
 This simple Ruby on Rails app showcases ActionMailer for sending emails and Postmark for handling incoming emails.
 
+Gems used include:
+```Ruby
+gem 'postmark'
+gem 'mail'
+gem 'roadie'
+gem 'letter_opener'
+```
+
+By
+--
+**Robin Swenson-Healey**
+Nov 22, 2013
+
 Prompt
 ------
     As a Visitor (no user model needed),
