@@ -1,24 +1,13 @@
 class SupportAgentMailer < ActionMailer::Base
-  default from: "HelpDesk@example.com"
+  default from: "HelpDeskSupport@example.com"
 
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.support_agent_mailer.complaint_to_agent.subject
-  #
   def complaint_to_agent(ticket)
     @ticket = ticket
-    mail to: ticket.email, subject: "Sorry about your Problem!"
+    mail to: "helpadmin@example.com" , subject: "New Problem, ##{ticket.id}"
   end
 
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.support_agent_mailer.close_to_app.subject
-  #
   def problem_confirmation_to_user(ticket)
-    @greeting = "Hi"
-
-    mail to: "admin@example.com"
+    @ticket = ticket
+    mail to: ticket.email, subject: "Sorry about your Problem!"
   end
 end
