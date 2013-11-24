@@ -1,12 +1,20 @@
-<h2>Greetings,</h2> <h4><%= @user.name %>.</h4>
+<!DOCTYPE html>
+<head>
+  <title>HelpDesk Confirmation!</title>
+</head>
+
+<body>
+  <h2>Greetings,</h2> <h4><%= @ticket.complainant_name %>.</h4>
+
+  <p>We are really excited to read that you had a problem viewing our site today.  Here at the 'Help Desk', we appreciate the time you have taken to complain in our ear about it.</p>
+
+  <p>Keep your eyes pealed on the 'Help Desk' front-page, we will be getting to you ASAP!!! (in the order they are received).</p>
 
 
-<p>We are really excited to read that you had a problem viewing our site today.  Here at the 'Help Desk', we appreciate the time you have taken to complain in our ear about it.</p>
+  <p>Thanks, and have a problematic day!</p>
 
-<p>Keep your eyes pealed on the 'Help Desk' front-page, we will be getting to you ASAP!!! (in the order they are received).</p>
+  <h3>-< Robin S-H >-</h3>
+  <p>'Help Desk Agent since 1985'</p>
 
-
-<p>Thanks, and have a problematic day!</p>
-
-<h3>-< Robin S-H >-</h3>
-<p>'Help Desk Agent since 1985'</p>
+  <%= link_to "Keep in touch!", root_path %>
+</body>

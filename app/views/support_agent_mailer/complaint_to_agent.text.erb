@@ -1,0 +1,13 @@
+Yo, Robin.
+
+A new problem has come in:
+
+Name: <%= @ticket.complainant_name %>
+
+Email: <%= @ticket.email %>
+
+Problem: <%= @ticket.problem %>
+
+Created: <%= @ticket.created_at.strftime("%d %b %Y, %H : %M ") %>
+
+-Helpdesk

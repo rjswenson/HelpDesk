@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> New ticket in </title>
+</head>
+
+<body>
+  <h3>Yo, Robin.</h3>
+
+  <p>A new problem has come in:</p>
+  <ul>
+    <li>Name: <%= @ticket.complainant_name %></li>
+
+    <li>Email: <%= @ticket.email %></li>
+
+    <li>Problem: <%= @ticket.problem %></li>
+
+    <li>Created: <%= @ticket.created_at.strftime("%d %b %Y, %H : %M ") %></li>
+  </ul>
+
+  <h4>-Helpdesk</h4>
+</body>
