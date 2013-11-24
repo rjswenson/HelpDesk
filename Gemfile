@@ -5,7 +5,14 @@ gem 'rails', '4.0.0'
 
 gem 'letter_opener', :group => :development
 gem 'roadie', "~> 2.4.2"
+
 # Use sqlite3 as the database for Active Record
+
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
+
 gem 'sqlite3'
 
 # Use SCSS for stylesheets
@@ -45,3 +52,4 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+ruby "2.0.0"
