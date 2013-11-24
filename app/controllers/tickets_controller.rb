@@ -18,6 +18,7 @@ class TicketsController < ApplicationController
     puts "@ticket.inspect"
     if @ticket.save
       UserMailer.complaint_to_agent(@ticket).deliver
+      UserMailer.problem_confirmation_to_user(@ticket).deliver
       flash[:success] = "Ticket Created! You'll receive and email shortly."
       redirect_to root_path
     else

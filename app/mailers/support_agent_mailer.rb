@@ -16,7 +16,7 @@ class SupportAgentMailer < ActionMailer::Base
   #
   #   en.support_agent_mailer.close_to_app.subject
   #
-  def close_to_app
+  def problem_confirmation_to_user(ticket)
     @greeting = "Hi"
 
     mail to: "admin@example.com"
