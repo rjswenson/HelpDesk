@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Helpdesk::Application.config.secret_key_base = 'b9dff23b9b3c4cea4a196e6ff5e4f429e8a5061847d1bed357323f8cbe0caca343880689bbf56822ff41b5bd46084ab26182b6942dd27fd2d61d4f2816fe6846'
+Helpdesk::Application.config.secret_key_base = ENV['SECRET_TOKEN']
