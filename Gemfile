@@ -3,12 +3,15 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-gem 'letter_opener', :group => :development
+gem 'postmark-rails', '~> 0.5.2'
 gem 'roadie', "~> 2.4.2"
+gem 'foreman'
+gem 'figaro'
 
 # Use sqlite3 as the database for Active Record
 group :test, :development do
   gem 'sqlite3'
+  gem 'letter_opener'
 end
 
 group :production do
