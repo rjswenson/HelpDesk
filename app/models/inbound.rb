@@ -9,11 +9,12 @@ class Inbound
 private
   def ticket_values_from_json(response_obj)
     response_obj = response_obj["TextBody"]
-
+    puts "Response Object now is:"
+    puts response_obj
     response_obj.scan(/\[(.*?)\]/m).map do |val|
+      puts "Value is first: #{val}"
       val[3..-1]
-      puts "THE VALUE OF THIS IS: #{val}"
-      puts "==========================="
+      puts "Now it IS: #{val}"
     end
   end
 end
