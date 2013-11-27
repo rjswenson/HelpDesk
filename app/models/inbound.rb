@@ -10,6 +10,7 @@ private
   def ticket_values_from_json(response)
     response.body.scan(/\[(.*?)\]/m).flatten.map do |val|
       val[3..-1]
+      puts val
     end
   end
 end
