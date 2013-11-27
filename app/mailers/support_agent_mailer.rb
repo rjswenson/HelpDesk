@@ -1,5 +1,5 @@
 class SupportAgentMailer < ActionMailer::Base
-  default from: "HelpDeskSupport@example.com"
+  default from: "robin@taggd.it"
 
   def complaint_to_agent(ticket)
     @ticket = ticket
