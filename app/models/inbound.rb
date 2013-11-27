@@ -13,7 +13,7 @@ private
     puts "=============================="
     response_obj = response_obj["TextBody"]
     puts "Response Object now is:"
-    puts response_obj
+    puts "~====#{response_obj}=====~"
     derp = response_obj.scan(/\[(.*?)\]/m)
     puts "This should be an array of the 3 objs:"
     puts derp.inspect
