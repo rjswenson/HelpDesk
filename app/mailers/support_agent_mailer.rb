@@ -3,11 +3,18 @@ class SupportAgentMailer < ActionMailer::Base
 
   def complaint_to_agent(ticket)
     @ticket = ticket
-    mail to: "helpadmin@example.com" , subject: "New Problem, ##{ticket.id}"
+    mail(
+      :reply_to       => '4ff281484024fa908cb375d6359d12b7@inbound.postmarkapp.com',
+      :subject        =>  'New Problem, ##{ticket.id}',
+      :to             =>  'robin@taggd.it'
+    )
   end
 
   def problem_confirmation_to_user(ticket)
     @ticket = ticket
-    mail to: ticket.email, subject: "Sorry about your Problem!"
+    mail(
+      :subject        =>  'Sorry about your problem!',
+      :to             =>  ticket.email
+    )
   end
 end
