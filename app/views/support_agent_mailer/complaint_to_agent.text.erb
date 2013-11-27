@@ -2,6 +2,8 @@ Yo, Robin.
 
 A new problem has come in:
 
+Tix_Num: <%= @ticket.id %>
+
 Name: <%= @ticket.complainant_name %>
 
 Email: <%= @ticket.email %>
@@ -9,5 +11,12 @@ Email: <%= @ticket.email %>
 Problem: <%= @ticket.problem %>
 
 Created: <%= @ticket.created_at.strftime("%d %b %Y, %H : %M ") %>
+
+========================================
+PLEASE INCLUDE
+========================================
+[tix <%= @ticket.id %>]
+[rep]
+[com false/true]
 
 -Helpdesk
