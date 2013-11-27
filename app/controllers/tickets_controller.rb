@@ -15,7 +15,6 @@ class TicketsController < ApplicationController
 
   def create
     @ticket = Ticket.new(ticket_params)
-    puts "@ticket.inspect"
     if @ticket.save
       SupportAgentMailer.complaint_to_agent(@ticket).deliver
       SupportAgentMailer.problem_confirmation_to_user(@ticket).deliver
