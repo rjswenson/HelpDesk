@@ -3,5 +3,6 @@ class InboundsController < ApplicationController
 
   def create
     Ticket.find_and_update! Inbound.new(response)
+    render nothing: true
   end
 end

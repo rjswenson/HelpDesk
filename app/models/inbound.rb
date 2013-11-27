@@ -9,7 +9,8 @@ class Inbound
 private
   def ticket_values_from_json(response)
     response.body.scan(/\[(.*?)\]/m).flatten.map do |val|
-      val[3..-1]
+      val[4..-1]
     end
   end
 end
+
