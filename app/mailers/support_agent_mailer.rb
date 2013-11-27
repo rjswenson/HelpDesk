@@ -5,7 +5,7 @@ class SupportAgentMailer < ActionMailer::Base
     @ticket = ticket
     mail(
       :reply_to       => '4ff281484024fa908cb375d6359d12b7@inbound.postmarkapp.com',
-      :subject        =>  'New Problem, ##{ticket.id}',
+      :subject        =>  'New Problem, ' ticket.id,
       :to             =>  'robin@taggd.it'
     )
   end
