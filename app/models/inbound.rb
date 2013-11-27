@@ -11,7 +11,7 @@ private
     puts "=============================="
     puts response_obj.inspect
     puts "=============================="
-    response_obj = response_obj["TextBody"]
+    response_obj = response_obj["TextBody"].to_s
     puts "Response Object now is:"
     puts "~====#{response_obj}=====~"
     derp = response_obj.scan(/\[(.*?)\]/m)
