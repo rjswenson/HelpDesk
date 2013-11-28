@@ -8,21 +8,8 @@ class Inbound
 
 private
   def ticket_values_from_json(response_obj)
-    puts "=============================="
-    puts response_obj.inspect
-    puts "=============================="
-    response_obj = response_obj["TextBody"].to_s
-    puts "Response Object now is:"
-    puts "~====#{response_obj}=====~"
-    derp = response_obj.scan(/\[(.*?)\]/m)
-    puts "This should be an array of the 3 objs:"
-    puts derp.inspect
-    puts "=================================="
-    derp.map do |val|
-      puts "Value is first: #{val}"
-      val[3..-1]
-      puts "Now it IS: #{val}"
+    response_obj.scan(/\[(.*?)\]/m).flatten.map do |val|
+      val[4..-1]
     end
   end
 end
-
