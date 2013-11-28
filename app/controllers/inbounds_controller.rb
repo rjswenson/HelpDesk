@@ -5,7 +5,7 @@ class InboundsController < ApplicationController
     request.body.rewind
     response_obj = Postmark::Json.decode(request.body.read)
 
-    inbound = Inbound.new(response_obj)
-    Ticket.find_and_update!(inbound)
+    Ticket.find_and_update!(Inbound.new(response_obj))
+    render nothing: true
   end
 end
