@@ -11,13 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131126182646) do
-
-  create_table "inbounds", force: true do |t|
-    t.string   "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20131128004611) do
 
   create_table "tickets", force: true do |t|
     t.string   "problem",          limit: 200
@@ -26,7 +20,7 @@ ActiveRecord::Schema.define(version: 20131126182646) do
     t.boolean  "completed",                    default: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "response"
+    t.text     "reply",            limit: 255, default: ""
   end
 
 end
