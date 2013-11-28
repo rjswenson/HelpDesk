@@ -6,7 +6,7 @@ class Ticket < ActiveRecord::Base
   def self.find_and_update!(inbound)
     @tix_id = inbound.ticket_id.to_i
     ticket = Ticket.find(@tix_id)
-    ticket.response += inbound.reply
+    ticket.reply += inbound.reply
     ticket.completed = inbound.completed.chomp.to_bool
     ticket.save!
   end

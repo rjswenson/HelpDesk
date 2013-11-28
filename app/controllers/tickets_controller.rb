@@ -36,6 +36,6 @@ class TicketsController < ApplicationController
 
   def ticket_params
     params.require(:ticket).permit(:problem,
-            :complainant_name, :email, :completed)
+            :complainant_name, :email, :completed, :reply)
   end
 end
