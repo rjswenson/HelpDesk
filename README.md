@@ -9,11 +9,19 @@ This simple Ruby on Rails app showcases ActionMailer for sending emails and Post
 
 Gems used include:
 ```Ruby
-gem 'postmark'
-gem 'mail'
+gem 'postmark-rails'
 gem 'roadie'
 gem 'letter_opener'
 ```
+The flow is:
+1. A user creates a ticket on the index
+2. App via Postmark sends an email to user
+3. Postmark also sends email to admin.
+4. Admin can reply to email with reply text.
+5. Postmark redirects json to App.
+6. App creates Inbounds obj which modifies ticket.
+7. Website index updated with new info.
+
 
 By
 --
